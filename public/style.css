@@ -27,7 +27,7 @@
   grid-row-gap: 9px;
   justify-items: stretch;
   align-items: stretch;
-  margin-left: 200px;
+  margin-left: 300px;
   margin-top: 150px;
   
 }
@@ -49,4 +49,17 @@
     margin: 10px;
     border: 1px solid black;
     text-align: center;   
+}
+
+.episodecontainer {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  /* grid-template-rows: 500px; */
+  grid-column-gap: 50px;
+  grid-row-gap: 9px;
+  justify-items: stretch;
+  align-items: stretch;
+  margin-left: 300px;
+  margin-top: 150px;
+  
 }
