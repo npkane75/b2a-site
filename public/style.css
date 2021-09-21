@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  background-color: forestgreen;
+  width: 1600px;
+  height: 900px;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  margin-left: 150px;
+}
+
+#box {
+  width: 600px;
+    height: 400px;
+    background-color: white;
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center;
+       
+}
+
