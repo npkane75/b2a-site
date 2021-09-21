@@ -22,7 +22,7 @@ app.use(express.static('public'))
 
 //Homepage/////////
 app.get('/' , (req, res) => {
-    res.render('home.ejs')
+    res.render('index.ejs')
 })
 
 /// START SERVER ////////////

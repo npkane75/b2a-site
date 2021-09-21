@@ -19,3 +19,34 @@
        
 }
 
+.gridcontainer {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  /* grid-template-rows: 500px; */
+  grid-column-gap: 50px;
+  grid-row-gap: 9px;
+  justify-items: stretch;
+  align-items: stretch;
+  margin-left: 200px;
+  margin-top: 150px;
+  
+}
+
+#gridbox {
+  width: 400px;
+    height: 350px;
+    /* background-color: white; */
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center; 
+    background-image:url("/Amp1.png")
+}
+
+#gridbox2 {
+  width: 400px;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center;   
+}
