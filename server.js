@@ -1,4 +1,4 @@
-/ REQUIRED MODULES ////////////
+// REQUIRED MODULES ////////////
 require('dotenv').config()
 const express = require('express')
 const rowdy = require('rowdy-logger')

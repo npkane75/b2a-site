@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 
 // local host connection
 
-
+console.log(process.env.MONGODB_URI)
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    
+   
   });
 
   mongoose.connection.on('connected', () => {
