@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>text field</h1>
+    <h1>new post</h1>
+
+    <div class= "gridcontainer">
+        <form action="/show" method="POST">
+            <label for="name">Name:</label>
+            <input name="name" type="text">
+            <br>
+            <label for="post">Post Comments:</label>
+            <input name="post" type="text">
+            <br>
+            <label for="location">Where you at?</label>
+            <input name="whereyouat" type="text">
+            <br>
+            <input type="submit" value="Create Post">
+        </form>
+    </div>
+    
+
 </body>
 </html>
