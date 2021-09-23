@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('../models');
+const db = require('../models/index.js');
 const router = express.Router();
 
 
@@ -9,12 +9,12 @@ const router = express.Router();
 // })
 
 
-// Index Route - Retrieve many/all posts
+// Index Route - Retrieve many/all posts base route
 router.get('/', (req, res) => {
   db.Post.find({}, (err, allPosts)=> {
     if (err) return console.log(err);
 
-    res.render('index.ejs', {
+    res.render('home.ejs', {
 allPosts: allPosts
     }); 
   });
@@ -27,59 +27,56 @@ router.get('/new', (req, res) => {
   res.render('new.ejs');
 });
 
-// Show Route - Retrieve one post  pass id?
-// router.get('/edit', (req, res) => {
-//   res.send('Hello World')
-
-// })
 
 // Create Route - Send data to create new post it adds to database and redirects
 router.post('/', (req, res) => {
   db.Post.create(req.body,(err, createdPost)=> {
-    // if (err) return console.log(err);
-    console.log(req.body)
-    res.render('index.ejs');
+     if (err) return console.log(err);
+     console.log(createdPost)
+    res.redirect('/b2a/'+ createdPost._id);
   });
+  console.log(req.body)
 });
 
 //Show info on one post
 router.get('/:id', (req, res) => {
-  db.Post.findById(req.params.id)
-  .populate('posts')
-  .exec((err, foundPost)=>{
-    if (err) return console.log(err);
-    
-    console.log(foundPost); 
-
-    res.render('show.ejs',{post: postCreated });
-  });
-});
+    db.Post.findById(req.params.id, (err, showPost) => {
+      if (err) return console.log(err)
+      console.log(req.params.id)
+      console.log('hello',showPost)
+      res.render('show.ejs', { onePost: showPost})
+  })
+   
+})
 
 
 // //retrieve edit form for retrieved blog
-// router.get('/:id/edit', (req, res) => { 
-//   res.render('edit.ejs')
-// })
+router.get('/:id/edit', (req, res) => {
+  db.Post.findById(req.params.id, (err, showPost) => {
+      if (err) return console.log(err)
+      res.render('edit.ejs', { onePost: showPost})
+  })
+})
+
 
 //will update a particular blog and then redirect
 router.put('/:id', (req, res) => {
-  db.Post.create(req.body, (err, createdPost) => {
-    if (err){return console.log(err)} 
-
-console.log(createdPost);
-
-res.redirect('show.ejs');
-  });
-});
+  db.Post.findByIdAndUpdate(req.params.id, req.body, (err, updatedPost) => {
+      if (err) return console.log(err)
+      res.redirect('/b2a/' + req.params.id)
+  })
+  console.log(req.body);
+})
 
 
 
-//delete a particular blog then redirect
+
+//delete a Post and then redirect
 router.delete('/:id', (req, res) => {
-  db.Post.findByIdAndRemove(req.params.id, (err) => {
+  db.Post.findByIdAndDelete(req.params.id, (err) => {
 		if (err) return console.log(err);
 
-		res.redirect('/new.ejs');
+		res.redirect('/b2a');
 	});
 });
 
