@@ -63,7 +63,7 @@ router.get('/:id/edit', (req, res) => {
 router.put('/:id', (req, res) => {
   db.Post.findByIdAndUpdate(req.params.id, req.body, (err, updatedPost) => {
       if (err) return console.log(err)
-      res.redirect('/b2a/' + req.params.id)
+      res.redirect('/b2a/' + updatedPost._id)
   })
   console.log(req.body);
 })
@@ -73,11 +73,14 @@ router.put('/:id', (req, res) => {
 
 //delete a Post and then redirect
 router.delete('/:id', (req, res) => {
+ console.log(req.params.id)
+ console.log('you hit the delete route')
   db.Post.findByIdAndDelete(req.params.id, (err) => {
 		if (err) return console.log(err);
 
 		res.redirect('/b2a');
 	});
+ 
 });
 
 module.exports = router;

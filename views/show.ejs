@@ -11,9 +11,18 @@
     <div class= "gridcontainer">
 
         <div id="gridbox" background-color="yellow">
-        <h4><%= onePost.name %></h4>
+        <ul>
+           <li> <h4><%= onePost.name %> </h4></li> 
+           <li> <h4><%= onePost.subject %> </h4></li>
+           <li> <h4><%= onePost.location %> </h4></li> 
+           <li> <h4><%= onePost.comment %> </h4></li>
+           <li> <h6><%= onePost.createdAt %> </h6></li> 
+        </ul>
 
-     
+        <input type="submit" value="Create New Post"> 
+        <a href="/b2a/<%=onePost._id %>/edit"><input type="submit" value="Edit Post"></a>
+        
+    
         </div>
        
     </div>

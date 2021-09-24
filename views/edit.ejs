@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title><%= onePost.name  %></title>
+</head>
+<body>
+    
+    <strong>
+        <h1><%= onePost.subject  %> </h1>
+    </strong>
+
+
+
+    
+    
+
+    <section class="title">
+        <div>
+            <form action="/b2a/<%= onePost._id %>?_method=PUT" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" name="name" value="<%= onePost.name %>">
+                <br>
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" value="<%= onePost.subject %>">
+                <br>
+                <label for="comments"> comment:</label>
+                <input type="text" name="category" value="<%= onePost.comment %>">
+                <br>
+                <label for="location"> Location:</label>
+                <input type="text" name="location" value="<%= onePost.location %>">
+                <br>
+                <input type="submit" value="update">
+                </form>
+                <form  action="/b2a/<%= onePost._id %>?_method=DELETE " method="POST">
+                    <input type="submit" value="Delete this Post "/>
+                </form>
+    </div>
+    </section>
+    
+    
+        <!-- <section class="pic">
+            <strong>Section 1 "Profile Pic"</strong>
+        </section> -->
+
+
+        
