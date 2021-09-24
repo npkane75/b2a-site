@@ -32,12 +32,22 @@ router.post('/episodeIndex', (req, res) => {
 })
 
 //Show info on one post
+  // res.send('hello world')  render out episode 1 ejs
+  //db. post  bring in the data for that post
+
 router.get('/:id', (req, res) => {
-  res.send('hello world')
+  db.Post.findById(req.params.id, (err, showEpisode) => {
+    if (err) return console.log(err)
+    console.log(req.params.id)
+    console.log('hello',showEpisode)
+    res.render('/episodepages/episode.ejs', { episodePost: showEpisode})
+})
+ 
 })
 
 //show edit form for retrieved blog
 router.get('/:id/edit', (req, res) => {
+
   res.send('hello world')
 })
 
