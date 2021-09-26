@@ -2,20 +2,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 
-body, html{
+body,html{
     height:100%;
     margin: 0;
     font-size: 16px;
     font-family:"Permanent Marker", cursive, sans-serif ;
     font-weight: 400;
     line-height: 1.8em;
-    color:rgb(43, 41, 41);
-    background-image: url("bewteentwoamps.png");
-position: relative;
-/* opacity: 0.70; */
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-/* you can set this to scroll instead of fixed if you dont want parallax effect. */
-background-attachment: scroll;
 }
+
+.formcontainer{
+    padding-top: 150px;
+    margin-left: 200px;
+    /* display:flex; */
+    /* width: 600px; */
+    height: 200px;
+    background-color: white;
+    margin: 0px;
+    border: 1px solid black;
+    text-align: center;  
+}
+
+
+
+
+
+
+    /* color:rgb(43, 41, 41); */
+    /* background-image: url("bewteentwoamps.png");
+    position: relative;
+/* opacity: 0.70; */
+    /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+/* you can set this to scroll instead of fixed if you dont want parallax effect. */
+    /* background-attachment: scroll;
+*/ 
