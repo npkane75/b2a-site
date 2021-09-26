@@ -22,11 +22,11 @@ app.use('/b2a', postController);  //required to connect the controller to the ap
 
 //Homepage/////////
 app.get('/' , (req, res) => {
-    res.render('landingpage.ejs')
+    res.render('newhomepage.ejs')
 })
 
 /// START SERVER ////////////
-app.listen(process.env.PORT || 4000, () => {
+app.listen(process.env.PORT || 3710, () => {
     console.log(` 🎨 💿 👨‍🎤 The server is running on port: ${PORT} 🎨 💿 👨‍🎤 `);
     rowdyResults.print()
 })
