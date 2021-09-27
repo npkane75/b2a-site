@@ -3,14 +3,12 @@
 
 
 body,html{
-    /* height:100%; */
-    /* margin: 0; */
+    height:100%;
+    margin: 0;
     font-size: 16px;
     font-family:"Permanent Marker", cursive, sans-serif ;
     font-weight: 400;
     line-height: 1.8em;
-    background-color: rgb(210, 210, 210);
-    
 }
 
 .formcontainer{
@@ -19,9 +17,9 @@ body,html{
     /* display:flex; */
     /* width: 600px; */
     height: 200px;
-    /* background-color: white; */
+    background-color: white;
     margin: 0px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     text-align: center;  
 }
 
@@ -71,28 +69,3 @@ label {
 #post {
     padding-bottom: 10px;
 }
-
-#fdiv {
-    background-color: rgb(69, 80, 80);
-    /* background-image: url("bewteentwoamps.png"); */
-    
-    /* position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: .50; */
-}
-
-
-
-
-    /* color:rgb(43, 41, 41); */
-    /* background-image: url("bewteentwoamps.png");
-    position: relative;
-/* opacity: 0.70; */
-    /* background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-/* you can set this to scroll instead of fixed if you dont want parallax effect. */
-    /* background-attachment: scroll;
-*/ 

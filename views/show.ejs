@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/show.css">
     <title>Document</title>
 </head>
 <body>
-    <div class= "gridcontainer">
-
-        <div id="gridbox" background-color="yellow">
-        <ul>
-           <li> <h4><%= onePost.name %> </h4></li> 
-           <li> <h4><%= onePost.subject %> </h4></li>
-           <li> <h4><%= onePost.location %> </h4></li> 
-           <li> <h4><%= onePost.comment %> </h4></li>
-           <li> <h6><%= onePost.createdAt %> </h6></li> 
-        </ul>
-
-        <input type="submit" value="Create New Post"> 
-        <a href="/b2a/<%=onePost._id %>/edit"><input type="submit" value="Edit Post"></a>
-        
     
-        </div>
-       
+    <div class= "gridcontainer">
+        <div id="gridbox">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/HaKcxOPuv8c?start=35" title="YouTube video player" frameborder="1px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    
+            <div id="gridboxshow" background-color="yellow">
+                <ul>
+                   <li> <h4><%= onePost.name %> </h4></li> 
+                   <li> <h4><%= onePost.subject %> </h4></li>
+                   <li> <h4><%= onePost.location %> </h4></li> 
+                   <li> <h4><%= onePost.comment %> </h4></li>
+                   <li> <h6><%= onePost.createdAt %> </h6></li> 
+                </ul>
+        
+                <input type="submit" value="Create New Post"> 
+                <a href="/b2a/<%=onePost._id %>/edit"><input type="submit" value="Edit Post"><a>
+                    
+                    <hr color="#000000" size="2" width="90%">
+            </div>
+
+    
     </div>
+    <hr color="#000000" size="2" width="90%">
+
+    <div class= "gridcontainer">
+        <div id="gridbox">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/HaKcxOPuv8c?start=35" title="YouTube video player" frameborder="1px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    
+            <div id="gridboxshow" background-color="yellow">
+                <ul>
+                   <li> <h4><%= onePost.name %> </h4></li> 
+                   <li> <h4><%= onePost.subject %> </h4></li>
+                   <li> <h4><%= onePost.location %> </h4></li> 
+                   <li> <h4><%= onePost.comment %> </h4></li>
+                   <li> <h6><%= onePost.createdAt %> </h6></li> 
+                </ul>
+        
+                <input type="submit" value="Create New Post"> 
+                <a href="/b2a/<%=onePost._id %>/edit"><input type="submit" value="Edit Post"><a>
+                    
+                    <hr color="#000000" size="2" width="90%">
+            </div>
+
+    
+    </div>
+    <hr color="#000000" size="2" width="90%">
 </body>
 </html>

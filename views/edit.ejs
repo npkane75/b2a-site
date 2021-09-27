@@ -4,47 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="/crud.css">
     <title><%= onePost.name  %></title>
 </head>
 <body>
     
-    <strong>
+    <!-- <strong>
         <h1><%= onePost.subject  %> </h1>
-    </strong>
-
+    </strong> -->
 
 
     
-    
-
-    <section class="title">
-        <div>
-            <form action="/b2a/<%= onePost._id %>?_method=PUT" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" name="name" value="<%= onePost.name %>">
+        <div class="formcontainer">
+            <strong>
+                <h1><%= onePost.subject  %> </h1>
+            </strong>
+            <form  action="/b2a/<%= onePost._id %>?_method=PUT" method="POST">
+                <label for="name" id="name">Name:</label>
+                <input id="iname" type="text" name="name" value="<%= onePost.name %>">
                 <br>
-                <label for="subject">Subject:</label>
-                <input type="text" name="subject" value="<%= onePost.subject %>">
+                <label for="subject" id="subject">Subject:</label>
+                <input id="isubject" type="text" name="subject" value="<%= onePost.subject %>">
                 <br>
-                <label for="comments"> comment:</label>
-                <input type="text" name="category" value="<%= onePost.comment %>">
+                <label for="comments" id="post"> post:</label>
+                <!-- <input type="text" name="category" value="<%= onePost.comment %>"> -->
+                <textarea margin-right="77px" name="comment" type="text"><%= onePost.comment %></textarea>
                 <br>
-                <label for="location"> Location:</label>
-                <input type="text" name="location" value="<%= onePost.location %>">
+                <label for="location" id="loc"> Location:</label>
+                <input id="iloc" type="text" name="location" value="<%= onePost.location %>">
                 <br>
-                <input type="submit" value="update">
+                <input id="btn1" type="submit" value="update">
                 </form>
-                <form  action="/b2a/<%= onePost._id %>?_method=DELETE " method="POST">
-                    <input type="submit" value="Delete this Post "/>
+                <form  action="/b2a/newhomepage.ejs<%= onePost._id %>?_method=DELETE " method="POST">
+                    <input id="btn" type="submit" value="Delete this Post "/>
                 </form>
     </div>
-    </section>
+ 
     
     
         <!-- <section class="pic">
             <strong>Section 1 "Profile Pic"</strong>
         </section> -->
+
+        <!-- <div class= "formcontainer">
+            <h1>new post</h1>
+            <form action="/b2a" method="POST">
+                
+                <label for="name" id="name">Name:</label>
+                <input id ="iname" name="name" type="text">
+                <br>
+                <label for="subject" id="subject">Subject:</label>
+                <input id ="isubject" name="subject" type="text">
+                <br>
+                <label for="comment" id="post">Post Comments:</label>
+                <textarea name="comment" type="text"></textarea>
+                <br>
+                <label for="location" id="loc">Where you at?</label>
+                <input id="iloc" name="location" type="text">
+                <br> -->
 
 
         

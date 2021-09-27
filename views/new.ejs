@@ -12,25 +12,24 @@
     <title>Document</title>
 </head>
 <body>
-    
 
     <div class= "formcontainer">
-        <h1>new post</h1>
-        <form action="/b2a" method="POST">
+        <form id="fdiv" action="/b2a" method="POST">
+            <h1>new post</h1>
             
-            <label for="name">Name:</label>
-            <input name="name" type="text">
+            <label for="name" id="name">Name:</label>
+            <input id ="iname" name="name" type="text">
             <br>
-            <label for="subject">Subject:</label>
-            <input name="subject" type="text">
+            <label for="subject" id="subject">Subject:</label>
+            <input id ="isubject" name="subject" type="text">
             <br>
-            <label for="comment">Post Comments:</label>
-            <input name="comment" type="text">
+            <label for="comment" id="post">Post Comments:</label>
+            <textarea name="comment" type="text"></textarea>
             <br>
-            <label for="location">Where you at?</label>
-            <input name="location" type="text">
+            <label for="location" id="loc">Where you at?</label>
+            <input id="iloc" name="location" type="text">
             <br>
-            <input type="submit" value="Create Post">
+            <input id="btn" type="submit" value="Create Post">
         </form>
     </div>
     
