@@ -2,6 +2,7 @@
 
 body {
 background-color: rgb(255, 255, 255);
+font-family:"Permanent Marker", cursive, sans-serif ;
 }
 
 .container {
@@ -29,12 +30,14 @@ background-color: rgb(255, 255, 255);
 .gridcontainer {
   display: grid;
   grid-template-columns: 300px 469px 400px;
+  background-color: rgb(69, 80, 80);
   /* grid-template-rows: 500px; */
   grid-column-gap: 50px;
   grid-row-gap: 9px;
   justify-items: stretch;
   align-items: stretch;
-  margin-left: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 150px;
   justify-content: end;
   

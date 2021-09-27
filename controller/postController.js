@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   db.Post.find({}, (err, allPosts)=> {
     if (err) return console.log(err);
 
-    res.render('home.ejs', {
+    res.render('newhomepage.ejs', {
 allPosts: allPosts
     }); 
   });

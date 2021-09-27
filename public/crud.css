@@ -3,13 +3,18 @@
 
 
 body,html{
-    /* height:100%; */
-    /* margin: 0; */
+    height:100%; 
+     margin: 0;
     font-size: 16px;
     font-family:"Permanent Marker", cursive, sans-serif ;
+    /* background-image: url("bewteentwoamps.png"); */
     font-weight: 400;
-    line-height: 1.8em;
-    background-color: rgb(210, 210, 210);
+    line-height: 1.8em; 
+    /* opacity: 50%; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: rgb(210, 210, 210); */ 
     
 }
 

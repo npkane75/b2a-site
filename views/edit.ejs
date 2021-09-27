@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/style.css"> -->
     <link rel="stylesheet" href="/crud.css">
-    <title><%= onePost.name  %></title>
+    <!-- <title><%= onePost.name  %></title> -->
 </head>
 <body>
     
@@ -17,10 +17,12 @@
 
     
         <div class="formcontainer">
-            <strong>
+            <%- include('../partials/nav.ejs')%>
+            <!-- <strong>
                 <h1><%= onePost.subject  %> </h1>
-            </strong>
-            <form  action="/b2a/<%= onePost._id %>?_method=PUT" method="POST">
+            </strong> -->
+            <form id="fdiv" action="/b2a/<%= onePost._id %>?_method=PUT" method="POST">
+                <h1><%= onePost.subject  %> </h1>
                 <label for="name" id="name">Name:</label>
                 <input id="iname" type="text" name="name" value="<%= onePost.name %>">
                 <br>
